@@ -81,7 +81,7 @@ class Student:
 
 
 student = Student("Mogg")
-for day in range(365):
+for day in range(366):
     if not student.alive:
         break
     student.live(day)
