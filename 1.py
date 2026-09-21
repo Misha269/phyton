@@ -11,25 +11,36 @@ class Student:
 
     def study(self):
         print("Я пішов до академії IT STEP")
-        self.progress += 1
+        self.progress += 3
         self.energy -= 1
         self.gladness -= 3
+        self.money -= 2
 
     def chill(self):
         print("Я пішов з друзяками гулять")
         self.gladness += 2
-        self.energy -= 3
-        self.progress -= 1
+        self.energy -= 2
+        self.progress -= 3
+        self.money -= 3
 
     def sleep(self):
         print("Я пішов спати")
         self.energy += 3
-        self.gladness += 1
+        self.gladness += 2
 
     def eat(self):
         print("Чіпси та кола - наші найкращі друзі :)")
-        self.energy += 1
-        self.gladness += 1
+        self.energy += 3
+        self.gladness += 2
+        self.money -= 3
+
+    def work(self):
+        print("Я пішов працювати")
+        self.energy -= 2
+        self.gladness -= 1
+        self.progress += 2
+        self.money += 7
+
 
     def is_alive(self):
         if self.gladness <= 0:
@@ -44,13 +55,17 @@ class Student:
         if self.progress > 100:
             print("Я геній. Достроково закінчив академію IT STEP :)")
             self.alive = False
+        if self.money <= 0:
+            print("Я бомж")
+            self.alive = False
+
 
 
     def live(self, day):
         print(f"День №{day} з життя {self.name}")
         print("-"*30)
 
-        func = [self.study, self.sleep, self.eat, self.chill]
+        func = [self.study, self.sleep, self.eat, self.chill, self.work]
         random.choice(func)()
 
         self.info()
@@ -62,9 +77,10 @@ class Student:
         print(f"Задоволення : {self.gladness}")
         print(f"Знання      : {self.progress}")
         print(f"Енергія     : {self.energy}")
+        print(f"Гроші       : {self.money}")
 
 
-student = Student("Vasya")
+student = Student("Mogg")
 for day in range(365):
     if not student.alive:
         break
