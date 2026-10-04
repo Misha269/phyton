@@ -4,7 +4,7 @@ import hashlib
 connection = sqlite3.connect("db.sl3", timeout=15)
 cur = connection.cursor()
 
-users = [("misha", "1234", "misha@gmail.com"),("andrey", "5678", "andrey@gmail.com"), ("alex", "2222", "alex@gmail.com")]
+users = [("misha", "1234", "misha@gmail.com"),("andrey", "5678", "andrey@gmail.com"), ("mogg", "2222", "mogg@gmail.com")]
 
 
 for login, password, email in users:
