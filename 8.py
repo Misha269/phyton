@@ -94,7 +94,7 @@ Text(text="PARKOUR:\nWASD - Move | SHIFT - Run\nSPACE - Jump (Double Jump!)",
 
 # Текст таймера (3 минуты = 180 секунд)
 game_time = 180.0
-timer_text = Text(text="Time: 03:00", position=(0.65, 0.45), scale=2, color=color.yellow)
+timer_text = Text(text="Time: 03:00", position=(0.55, 0.45), scale=2, color=color.yellow)
 game_won = False
 game_over = False
 
